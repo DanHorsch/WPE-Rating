@@ -1,0 +1,6 @@
+{
+  "name": "WPEngine Support Review Tracker",
+  "description": "Track, average, and rank support agents based on team feedback, using dynamic leaderboard stats and category rankings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
