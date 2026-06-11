@@ -4,14 +4,14 @@
  */
 
 import React from 'react';
-import { ShieldCheck, RefreshCw, BarChart2, Star } from 'lucide-react';
+import { ShieldCheck, BarChart2, Star } from 'lucide-react';
 
 interface HeaderProps {
   totalAgents: number;
   totalReviews: number;
   overallRating: number;
-  onReset: () => void;
-  isResetting: boolean;
+  onReset?: () => void;
+  isResetting?: boolean;
 }
 
 export default function Header({ totalAgents, totalReviews, overallRating, onReset, isResetting }: HeaderProps) {
@@ -56,16 +56,6 @@ export default function Header({ totalAgents, totalReviews, overallRating, onRes
                 </span>
               </div>
             </div>
-
-            <button
-              onClick={onReset}
-              disabled={isResetting}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-50 text-slate-600 hover:text-slate-800 rounded-lg transition-colors border border-slate-200 text-xs font-mono font-bold disabled:opacity-50 cursor-pointer"
-              title="Reset Database to original seeds for testing"
-            >
-              <RefreshCw className={`h-3 w-3 text-slate-400 ${isResetting ? 'animate-spin' : ''}`} />
-              Reset Seeds
-            </button>
           </div>
 
         </div>
